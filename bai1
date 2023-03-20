@@ -1,0 +1,14 @@
+function getStringHasMaxLength(str) {
+    let max = 0;
+    let result = [];
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] > max) {
+            max = str[i].length;
+            result = [str[i]];
+        } else if (str[i].length === max) {
+            result.push(str[i]);
+        }
+    }
+    return result;
+}
+console.log(getStringHasMaxLength(['aba', 'aa', 'ad', 'c', 'vcd']));
