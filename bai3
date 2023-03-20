@@ -1,0 +1,13 @@
+function getCountElement(arr) {
+    let count = {};
+    for (let i = 0; i < arr.length; i++) {
+        let a = arr[i];
+        if (!count[a]) {
+            count[a] = 1;
+        } else {
+            count[a]++;
+        }
+    }
+    return count;
+}
+console.log(getCountElement(["one", "two", "three", "one", "one", "three"]));
